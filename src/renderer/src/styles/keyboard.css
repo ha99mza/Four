@@ -1,0 +1,35 @@
+/* Réduction globale (ne prend pas trop d'espace) */
+.keyboard-scale {
+  transform: scale(0.85);           /* ajuste: 0.9, 0.85, 0.8... */
+  transform-origin: center bottom;  /* reste aligné au bas de l'écran */
+}
+
+/* Dark mode + contraste lisible */
+.keyboard-dark {
+  background: hsl(var(--card));
+}
+.keyboard-dark .hg-button {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  /* compact */
+  padding: 0.45rem 0.6rem;
+  margin: 4px;
+  font-size: 0.95rem;
+  border-radius: 10px;
+}
+.keyboard-dark .hg-row { margin: 4px 0; }
+.keyboard-dark .hg-rows { padding: 6px; }
+
+/* Boutons spéciaux */
+.keyboard-dark .hg-button.sk-action {
+  background: hsl(var(--muted));
+}
+.keyboard-dark .hg-button.sk-validate {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 600;
+}
+
+/* Empêche la sélection de texte lors des taps */
+.keyboard-dark, .keyboard-dark * { user-select: none; }
