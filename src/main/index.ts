@@ -30,7 +30,7 @@ async function initMongo() {
 }
 
 // ---- Serial ----
-const SERIAL_PATH = process.env.SERIAL_PATH || "COM14" // Linux: "/dev/ttyS2"
+const SERIAL_PATH = process.env.SERIAL_PATH || "/dev/ttyS2" // Linux: "/dev/ttyS2"
 const BAUD_RATE = Number(process.env.SERIAL_BAUD || 115200)
 
 // Dernière valeur reçue par four (affichage temps réel)
